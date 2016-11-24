@@ -10,4 +10,16 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.hannes.beergame.playActivity">
 
+    <Button
+        android:text="New Card"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        tools:textColor="@android:color/white"
+        android:background="@drawable/main_button"
+
+        android:id="@+id/button4"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="190dp" />
 </RelativeLayout>

@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".playActivity" />
-        <activity android:name=".instructionsActivity"></activity>
+        <activity android:name=".instructionsActivity" />
+        <activity android:name=".customizeActivity"></activity>
     </application>
 
 </manifest>

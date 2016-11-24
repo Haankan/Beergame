@@ -9,36 +9,25 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="#6b7a8f"
+
     tools:context="com.example.hannes.beergame.MainActivity">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="250dp"
         android:weightSum="1"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true">
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true">
 
-        <TextView
-            android:text="BeerGame!"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView2"
-            android:gravity="center"
-            android:textColorLink="?attr/colorPrimaryDark"
-            android:textColor="#f7882f"
-            android:textSize="50sp"
-            android:textStyle="normal|bold"
-            tools:textStyle="normal|bold|italic"
-            android:layout_weight="0.21"
 
-            android:layout_gravity="center" />
+
 
         <Button
             android:text="@string/play"
             android:layout_width="159dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="139dp"
+
             android:id="@+id/button"
             android:elevation="0dp"
             android:layout_alignParentTop="true"
@@ -58,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/button"
             android:layout_alignEnd="@+id/button"
-            android:layout_marginTop="27dp"
+            android:layout_marginTop="30dp"
             android:layout_gravity="center"
             tools:textColor="@android:color/white"
             android:background="@drawable/main_button"
@@ -72,7 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/button2"
             android:layout_alignStart="@+id/button"
-            android:layout_marginTop="37dp"
+            android:layout_marginTop="30dp"
             android:layout_gravity="center"
             tools:textColor="@android:color/white"
             android:background="@drawable/main_button"
@@ -80,4 +69,23 @@
             android:id="@+id/button3"
             />
     </LinearLayout>
+
+    <TextView
+        android:text="BeerGame!"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:gravity="center"
+        android:textColorLink="?attr/colorPrimaryDark"
+        android:textColor="#fefefe"
+        android:textSize="50sp"
+        android:textStyle="normal|bold"
+        tools:textStyle="normal|bold|italic"
+        android:layout_weight="0.21"
+
+        android:layout_gravity="center"
+        android:layout_marginTop="51dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/main_button"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

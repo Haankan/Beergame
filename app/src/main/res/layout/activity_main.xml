@@ -43,7 +43,7 @@
             android:layout_gravity="center"
             tools:textColor="@android:color/white"
             tools:background="@android:color/holo_blue_dark"
-            android:onClick=""/>
+            />
 
         <Button
             android:text="@string/instructions"
@@ -56,7 +56,7 @@
             tools:textColor="@android:color/white"
             tools:background="@android:color/holo_blue_dark"
             android:id="@+id/button2"
-            android:onClick=""/>
+            />
 
         <Button
             android:text="@string/customize"
@@ -69,6 +69,6 @@
             tools:textColor="@android:color/white"
             tools:background="@android:color/holo_blue_dark"
             android:id="@+id/button3"
-            android:onClick=""/>
+            />
     </LinearLayout>
 </RelativeLayout>

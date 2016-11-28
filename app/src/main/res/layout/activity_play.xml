@@ -11,25 +11,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.hannes.beergame.playActivity">
 
-    <Button
-        android:text="New Card"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        tools:textColor="@android:color/white"
-        android:background="@drawable/main_button"
-
-        android:id="@+id/button4"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="190dp" />
-
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout">
 
         <ImageView
             android:layout_width="200dp"
@@ -44,8 +32,38 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ace_hearts"
+            app:srcCompat="@drawable/king_of_clubs2"
             android:id="@+id/imageView2"
             android:layout_weight="1" />
     </LinearLayout>
+
+    <Button
+        android:text="@string/newCard"
+        android:layout_width="170dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        tools:textColor="@android:color/white"
+        android:background="@drawable/main_button"
+
+        android:id="@+id/button4"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/textView"
+        android:layout_alignEnd="@+id/button4"
+        android:layout_centerHorizontal="false" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"></LinearLayout>
 </RelativeLayout>

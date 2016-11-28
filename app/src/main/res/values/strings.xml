@@ -3,4 +3,5 @@
     <string name="play">Play</string>
     <string name="instructions">Instructions</string>
     <string name="customize">Customize</string>
+    <string name="newCard">New Card</string>
 </resources>

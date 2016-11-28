@@ -8,15 +8,42 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#6b7a8f"
     tools:context="com.example.hannes.beergame.instructionsActivity">
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text="@string/instructions"
+        android:textColorLink="?attr/colorPrimaryDark"
+        android:textColor="#fefefe"
+        android:textStyle="normal|bold"
+        tools:textStyle="normal|bold|italic"
+        android:layout_weight="0.21"
+        android:layout_gravity="center"
+        android:layout_marginTop="51dp"
+        android:textSize="50sp"
         android:ems="10"
         android:id="@+id/editText"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:textColor="#0a0a0a"
+        android:text="@string/instruktionerna"
+
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_instrruta"
+        android:id="@+id/textView"
+        android:layout_marginTop="65dp"
+        android:layout_below="@+id/editText"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
+
+
+
+

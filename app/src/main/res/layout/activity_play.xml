@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#6b7a8f"
+    android:background="@drawable/bakgrunddd"
     tools:context="com.example.hannes.beergame.playActivity">
 
     <LinearLayout
@@ -46,7 +46,7 @@
         android:layout_gravity="center"
         tools:textColor="@android:color/black"
         android:background="@drawable/main_play_button"
-
+        android:textSize="19sp"
         android:id="@+id/button4"
         android:layout_below="@+id/linearLayout"
         android:layout_centerHorizontal="true"

@@ -11,24 +11,6 @@
     android:background="#6b7a8f"
     tools:context="com.example.hannes.beergame.instructionsActivity">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:inputType="textPersonName"
-        android:text="@string/instructions"
-        android:textColorLink="?attr/colorPrimaryDark"
-        android:textColor="#fefefe"
-        android:textStyle="normal|bold"
-        tools:textStyle="normal|bold|italic"
-        android:layout_weight="0.21"
-        android:layout_gravity="center"
-        android:layout_marginTop="51dp"
-        android:textSize="50sp"
-        android:ems="10"
-        android:id="@+id/editText"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
 
     <TextView
         android:textColor="#0a0a0a"
@@ -39,11 +21,28 @@
         android:layout_height="wrap_content"
         android:background="@drawable/main_instrruta"
         android:id="@+id/textView"
-        android:layout_marginTop="65dp"
-        android:layout_below="@+id/editText"
-        android:layout_centerHorizontal="true" />
-</RelativeLayout>
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="67dp" />
 
+    <TextView
+        android:text="@string/instructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#fefefe"
+        android:textStyle="normal|bold"
+        tools:textStyle="normal|bold|italic"
+
+        android:layout_weight="0.21"
+        android:layout_gravity="center"
+        android:layout_marginTop="51dp"
+        android:textSize="50sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+
+        android:id="@+id/textView3" />
+</RelativeLayout>
 
 
 

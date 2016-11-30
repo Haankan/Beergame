@@ -13,19 +13,18 @@ import android.util.Log;
 public class MySQLiteHelper extends SQLiteOpenHelper {
 
     public static final String TABLE_CARDS = "cards";
-    public static final String COLUMN_ID     = "_id";
-    public static final String COLUMN_TYPE   = "type";
-    public static final String COLUMN_NUMBER  = "number";
+    public static final String CARDS_COLUMN_ID     = "_id";
+    public static final String CARDS_COLUMN_TYPE   = "type";
+    public static final String CARDS_COLUMN_NUMBER  = "number";
 
- /*
     public static final String TABLE_CARDDECKS = "carddecks";
-    public static final String COLUMN_ID     = "_id";
-    public static final String COLUMN_NAME   = "name";
+    public static final String DECKS_COLUMN_ID     = "_id";
+    public static final String DECKS_COLUMN_NAME   = "name";
 
     public static final String TABLE_GAMEINSTRUCTIONS = "gameinstructions";
-    public static final String COLUMN_CARDDECKSID     = "id";
-    public static final String COLUMN_INSTRUCTIONS   = "instructions";
-     */
+    public static final String INSTR_COLUMN_CARDDECKSID     = "decksid";
+    public static final String INSTR_COLUMN_CARDSID     = "cardsid";
+    public static final String INSTR_COLUMN_INSTRUCTIONS   = "instructions";
 
     private static final String DATABASE_NAME = "cards.db";
     private static final int DATABASE_VERSION = 1;
@@ -33,24 +32,24 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     private static final String LOG_TAG = MySQLiteHelper.class.getName();
 
     // Database creation sql statement
-    private static final String DATABASE_CREATE = "create table "
+    private static final String CARDS_DATABASE_CREATE = "create table "
             + TABLE_CARDS + "( "
-            + COLUMN_ID     + " integer primary key autoincrement, "
-            + COLUMN_TYPE   +  " text not null,"
-            + COLUMN_NUMBER  +  " text not null);";
+            + CARDS_COLUMN_ID     + " integer primary key autoincrement, "
+            + CARDS_COLUMN_TYPE   +  " text not null,"
+            + CARDS_COLUMN_NUMBER  +  " text not null);";
 
-    /*
-     private static final String DATABASE_CREATE = "create table "
+
+     private static final String DECKS_DATABASE_CREATE = "create table "
             + TABLE_CARDDECKS + "( "
-            + COLUMN_ID     + " integer primary key autoincrement, "
-            + COLUMN_NAME  +  " text not null);";
+            + DECKS_COLUMN_ID     + " integer primary key autoincrement, "
+            + DECKS_COLUMN_NAME  +  " text not null);";
 
-     private static final String DATABASE_CREATE = "create table "
+     private static final String GAMEINSTRUCTIONS_DATABASE_CREATE = "create table "
             + TABLE_GAMEINSTRUCTIONS + "( "
-            + COLUMN_CARDDECKSID     + " integer primary key autoincrement, "
-            + COLUMN_CARDSID    + " integer primary key autoincrement, "
-            + COLUMN_INSTRUCTIONS  +  " text not null);";
-    */
+            + INSTR_COLUMN_CARDDECKSID     + " integer primary key autoincrement, "
+            + INSTR_COLUMN_CARDSID    + " integer primary key autoincrement, "
+            + INSTR_COLUMN_INSTRUCTIONS  +  " text not null);";
+
 
 
     public MySQLiteHelper(Context context) {
@@ -59,7 +58,9 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase database) {
-        database.execSQL(DATABASE_CREATE);
+        database.execSQL(CARDS_DATABASE_CREATE);
+        database.execSQL(DECKS_DATABASE_CREATE);
+        database.execSQL(GAMEINSTRUCTIONS_DATABASE_CREATE);
     }
 
     @Override

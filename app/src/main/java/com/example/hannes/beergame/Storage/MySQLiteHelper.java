@@ -32,19 +32,19 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     private static final String LOG_TAG = MySQLiteHelper.class.getName();
 
     // Database creation sql statement
-    private static final String CARDS_DATABASE_CREATE = "create table "
+    private static final String CARDS_TABLE_CREATE = "create table "
             + TABLE_CARDS + "( "
             + CARDS_COLUMN_ID     + " integer primary key autoincrement, "
             + CARDS_COLUMN_TYPE   +  " text not null,"
             + CARDS_COLUMN_NUMBER  +  " text not null);";
 
 
-     private static final String DECKS_DATABASE_CREATE = "create table "
+     private static final String DECKS_TABLE_CREATE = "create table "
             + TABLE_CARDDECKS + "( "
             + DECKS_COLUMN_ID     + " integer primary key autoincrement, "
             + DECKS_COLUMN_NAME  +  " text not null);";
 
-     private static final String GAMEINSTRUCTIONS_DATABASE_CREATE = "create table "
+     private static final String GAMEINSTRUCTIONS_TABLE_CREATE = "create table "
             + TABLE_GAMEINSTRUCTIONS + "( "
             + INSTR_COLUMN_CARDDECKSID     + " integer primary key autoincrement, "
             + INSTR_COLUMN_CARDSID    + " integer primary key autoincrement, "
@@ -58,9 +58,9 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase database) {
-        database.execSQL(CARDS_DATABASE_CREATE);
-        database.execSQL(DECKS_DATABASE_CREATE);
-        database.execSQL(GAMEINSTRUCTIONS_DATABASE_CREATE);
+        database.execSQL(CARDS_TABLE_CREATE);
+        database.execSQL(DECKS_TABLE_CREATE);
+        database.execSQL(GAMEINSTRUCTIONS_TABLE_CREATE);
     }
 
     @Override

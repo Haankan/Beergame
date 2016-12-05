@@ -15,7 +15,7 @@ import java.util.List;
  */
 
 public class DBCardDeckStore implements CardDeckStore {
-    private static DBMemberStore storage ;
+    private static DBCardDeckStore storage ;
 
     // Database fields
     private SQLiteDatabase database;
@@ -23,7 +23,7 @@ public class DBCardDeckStore implements CardDeckStore {
     private String[] allColumns = { MySQLiteHelper.COLUMN_ID,
             MySQLiteHelper.COLUMN_NAME, MySQLiteHelper.COLUMN_EMAIL };
 
-    public DBMemberStore(Context context)  {
+    public DBCardDeckStore(Context context)  {
         dbHelper = new MySQLiteHelper(context);
         try {
             open();

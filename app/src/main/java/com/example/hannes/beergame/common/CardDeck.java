@@ -10,7 +10,7 @@ public class CardDeck {
 
     public CardDeck(String name, String email) {
         this.name = name;
-        this.email = email;dgfkdjn
+        this.email = email;
     }
 
     @Override

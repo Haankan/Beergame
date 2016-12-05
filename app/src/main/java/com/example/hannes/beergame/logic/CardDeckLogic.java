@@ -19,10 +19,10 @@ public class CardDeckLogic {
     }
 
     public List<Member> getMembers() {
-        return StorageProvider.getMemberStore(c).getMembers();
+        return null;// StorageProvider.getMemberStore(c).getMembers();
     }
 
     public void addMember(Member m) {
-        StorageProvider.getMemberStore(c).addMember(m);
+        //StorageProvider.getMemberStore(c).addMember(m);
     }
 }

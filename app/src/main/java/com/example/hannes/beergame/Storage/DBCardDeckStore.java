@@ -3,6 +3,7 @@ package com.example.hannes.beergame.Storage;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
@@ -20,8 +21,8 @@ public class DBCardDeckStore implements CardDeckStore {
     // Database fields
     private SQLiteDatabase database;
     private MySQLiteHelper dbHelper;
-    private String[] allColumns = { MySQLiteHelper.COLUMN_ID,
-            MySQLiteHelper.COLUMN_NAME, MySQLiteHelper.COLUMN_EMAIL };
+    private String[] allColumns = { MySQLiteHelper.INSTR_COLUMN_CARDDECKSID,
+            MySQLiteHelper.INSTR_COLUMN_CARDSID, MySQLiteHelper.TABLE_GAMEINSTRUCTIONS };
 
     public DBCardDeckStore(Context context)  {
         dbHelper = new MySQLiteHelper(context);

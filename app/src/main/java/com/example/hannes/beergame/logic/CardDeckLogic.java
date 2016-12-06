@@ -2,6 +2,7 @@ package com.example.hannes.beergame.logic;
 
 import android.content.Context;
 
+import com.example.hannes.beergame.Storage.StorageProvider;
 import com.example.hannes.beergame.common.CardDeck;
 
 import java.util.List;
@@ -18,10 +19,10 @@ public class CardDeckLogic {
     }
 
     public List<CardDeck> getCardDecks() {
-        return null;// StorageProvider.getMemberStore(c).getMembers();
+        return StorageProvider.getCardDeckStore(c).getCardDeck();
     }
 
     public void addMember(CardDeck m) {
-        //StorageProvider.getMemberStore(c).addMember(m);
+        StorageProvider.getCardDeckStore(c).addCardDeck(m);
     }
 }

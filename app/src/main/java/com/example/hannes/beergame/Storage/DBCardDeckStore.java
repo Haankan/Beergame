@@ -25,8 +25,8 @@ public class DBCardDeckStore implements CardDeckStore {
     // Database fields
     private SQLiteDatabase database;
     private MySQLiteHelper dbHelper;
-    private String[] allColumns = { MySQLiteHelper.INSTR_COLUMN_CARDDECKSID,
-            MySQLiteHelper.INSTR_COLUMN_CARDSID, MySQLiteHelper.TABLE_GAMEINSTRUCTIONS };
+    private String[] allColumns = { MySQLiteHelper.DECKS_COLUMN_ID,
+            MySQLiteHelper.DECKS_COLUMN_NAME };
 
     public DBCardDeckStore(Context context)  {
         dbHelper = new MySQLiteHelper(context);

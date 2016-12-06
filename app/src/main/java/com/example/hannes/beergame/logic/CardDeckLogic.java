@@ -22,7 +22,7 @@ public class CardDeckLogic {
         return StorageProvider.getCardDeckStore(c).getCardDeck();
     }
 
-    public void addMember(CardDeck m) {
+    public void addCardDeck(CardDeck m) {
         StorageProvider.getCardDeckStore(c).addCardDeck(m);
     }
 }

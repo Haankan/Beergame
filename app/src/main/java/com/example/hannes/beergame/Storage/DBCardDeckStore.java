@@ -33,11 +33,11 @@ public class DBCardDeckStore implements CardDeckStore {
         }
     }
 
-    public Member createMember(Member m) {
+    public CardDeck createCardDeck(CardDeck m) {
         ContentValues values = new ContentValues();
 
-        values.put(MySQLiteHelper.COLUMN_NAME, m.name());
-        values.put(MySQLiteHelper.COLUMN_EMAIL, m.email());
+        values.put(MySQLiteHelper.DECKS_COLUMN_NAME, m.name());
+        //values.put(MySQLiteHelper.COLUMN_EMAIL, m.());
 
         long insertId = database.insert(MySQLiteHelper.TABLE_MEMBERS, null,
                 values);
@@ -67,16 +67,16 @@ public class DBCardDeckStore implements CardDeckStore {
     }
 
     @Override
-    public List<Member> getMembers() {
-        List<Member> members = new ArrayList<Member>();
+    public List<CardDeck> getCardDeck() {
+        List<CardDeck> carddecks = new ArrayList<CardDeck>();
 
-        Cursor cursor = database.query(MySQLiteHelper.TABLE_MEMBERS,
+        Cursor cursor = database.query(MySQLiteHelper.TABLE_CARDDECKS,
                 allColumns, null, null, null, null, null);
 
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
-            Member m = cursorToMember(cursor);
-            members.add(m);
+            CardDeck m = cursorToMember(cursor);
+            carddecks.add(m);
             cursor.moveToNext();
         }
         // make sure to close the cursor

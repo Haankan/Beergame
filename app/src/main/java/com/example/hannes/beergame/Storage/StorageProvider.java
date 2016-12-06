@@ -7,7 +7,7 @@ import android.content.Context;
  */
 
 public class StorageProvider {
-    public static CardDeckStore getMemberStore(Context c) {
+    public static CardDeckStore getCardDeckStore(Context c) {
         return new DBCardDeckStore(c);
     }
 }

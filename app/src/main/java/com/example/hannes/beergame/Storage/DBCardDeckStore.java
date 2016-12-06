@@ -43,23 +43,23 @@ public class DBCardDeckStore implements CardDeckStore {
         values.put(MySQLiteHelper.DECKS_COLUMN_NAME, m.name());
         //values.put(MySQLiteHelper.COLUMN_EMAIL, m.());
 
-        long insertId = database.insert(MySQLiteHelper.TABLE_MEMBERS, null,
+        long insertId = database.insert(MySQLiteHelper.TABLE_CARDDECKS, null,
                 values);
-        Cursor cursor = database.query(MySQLiteHelper.TABLE_MEMBERS,
-                allColumns, MySQLiteHelper.COLUMN_ID + " = " + insertId, null,
+        Cursor cursor = database.query(MySQLiteHelper.TABLE_CARDDECKS,
+                allColumns, MySQLiteHelper.DECKS_COLUMN_ID + " = " + insertId, null,
                 null, null, null);
         cursor.moveToFirst();
-        Member newMember = cursorToMember(cursor);
+        CardDeck newCardDeck = cursorToCardDeck(cursor);
         cursor.close();
-        Log.d("db" ," storing meber");
-        return newMember;
+        Log.d("db" ," storing carddeck");
+        return newCardDeck;
     }
 
-    private Member cursorToMember(Cursor cursor) {
+    private CardDeck cursorToCardDeck(Cursor cursor) {
         long id = cursor.getLong(0);
         String name = cursor.getString(1);
-        String email = cursor.getString(2);
-        return new Member(name, email);
+        //String email = cursor.getString(2);
+        return new CardDeck(name);
     }
 
     public void open() throws SQLException {
@@ -79,17 +79,17 @@ public class DBCardDeckStore implements CardDeckStore {
 
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
-            CardDeck m = cursorToMember(cursor);
+            CardDeck m = cursorToCardDeck(cursor);
             carddecks.add(m);
             cursor.moveToNext();
         }
         // make sure to close the cursor
         cursor.close();
-        return members;
+        return carddecks;
     }
 
-    public void addMember(Member m) {
-        createMember(m);
+    public void addCardDeck(CardDeck m) {
+        createCardDeck(m);
     }
 
 }

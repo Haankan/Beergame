@@ -6,24 +6,22 @@ package com.example.hannes.beergame.common;
 
 public class CardDeck {
     private String name;
-    private String email;
 
-    public CardDeck(String name, String email) {
+
+    public CardDeck(String name) {
         this.name = name;
-        this.email = email;
+
     }
 
     @Override
     public String toString() {
-        return name + "<"+email+">";
+        return name;
     }
 
     public String name() {
         return name;
     }
 
-    public String email() {
-        return email;
-    }
+
 
 }

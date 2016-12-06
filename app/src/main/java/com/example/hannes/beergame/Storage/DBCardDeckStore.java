@@ -7,9 +7,13 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
+import com.example.hannes.beergame.common.CardDeck;
+
 import java.lang.reflect.Member;
 import java.util.ArrayList;
 import java.util.List;
+
+import static android.os.Build.VERSION_CODES.M;
 
 /**
  * Created by Hannes on 2016-12-05.
@@ -33,7 +37,7 @@ public class DBCardDeckStore implements CardDeckStore {
         }
     }
 
-    public Member createMember(Member m) {
+    public CardDeck createCardDeck(CardDeck m) {
         ContentValues values = new ContentValues();
 
         values.put(MySQLiteHelper.COLUMN_NAME, m.name());

@@ -2,7 +2,6 @@ package com.example.hannes.beergame.Storage;
 
 import com.example.hannes.beergame.common.CardDeck;
 
-import java.lang.reflect.Member;
 import java.util.List;
 
 /**
@@ -11,5 +10,5 @@ import java.util.List;
 
 public interface CardDeckStore {
     public List<CardDeck> getCardDeck();
-    public void addCardDeck(Member m);
+    public void addCardDeck(CardDeck m);
 }

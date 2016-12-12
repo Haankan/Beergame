@@ -49,9 +49,12 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 
      private static final String GAMEINSTRUCTIONS_TABLE_CREATE = "create table "
             + TABLE_GAMEINSTRUCTIONS + "( "
-            + INSTR_COLUMN_CARDDECKSID  + " integer, FOREIGN KEY (" + INSTR_COLUMN_CARDDECKSID + ") INTEGER REFERENCES " + TABLE_CARDDECKS + "("+DECKS_COLUMN_ID+"),"
-            + INSTR_COLUMN_CARDSID      + " integer, FOREIGN KEY (" + INSTR_COLUMN_CARDSID     + ") INTEGER REFERENCES " + TABLE_CARDS+"("+CARDS_COLUMN_ID+"),"
-            + INSTR_COLUMN_INSTRUCTIONS +  " text not null);";
+             + INSTR_COLUMN_INSTRUCTIONS +  " text not null,"
+             + INSTR_COLUMN_CARDDECKSID  + " integer,"
+             + INSTR_COLUMN_CARDSID      + " integer,"
+             + " FOREIGN KEY (" + INSTR_COLUMN_CARDDECKSID + ")  REFERENCES " + TABLE_CARDDECKS + "("+DECKS_COLUMN_ID+"),"
+             + " FOREIGN KEY (" + INSTR_COLUMN_CARDSID     + ")  REFERENCES " + TABLE_CARDS+"("+CARDS_COLUMN_ID+")" +
+             ");";
 
 
 
@@ -63,6 +66,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase database) {
         database.execSQL(CARDS_TABLE_CREATE);
         database.execSQL(DECKS_TABLE_CREATE);
+        Log.d(LOG_TAG, "create game instructions: " + GAMEINSTRUCTIONS_TABLE_CREATE);
         database.execSQL(GAMEINSTRUCTIONS_TABLE_CREATE);
         database.execSQL("INSERT INTO " + TABLE_CARDS + " VALUES (1, 1, 2)");
         database.execSQL("INSERT INTO " + TABLE_CARDS + " VALUES (2, 1, 3)");

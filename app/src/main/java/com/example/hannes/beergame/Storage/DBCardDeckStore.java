@@ -22,6 +22,8 @@ import static android.os.Build.VERSION_CODES.M;
 public class DBCardDeckStore implements CardDeckStore {
     private static DBCardDeckStore storage ;
 
+    private static final String LOG_TAG = DBCardDeckStore.class.getName();
+
     // Database fields
     private SQLiteDatabase database;
     private MySQLiteHelper dbHelper;
@@ -63,7 +65,10 @@ public class DBCardDeckStore implements CardDeckStore {
     }
 
     public void open() throws SQLException {
+        Log.d(LOG_TAG, "opening db");
+        Log.d(LOG_TAG, "opening db: " + database);
         database = dbHelper.getWritableDatabase();
+        Log.d(LOG_TAG, "opening db: " + database);
     }
 
     public void close() {
@@ -72,7 +77,11 @@ public class DBCardDeckStore implements CardDeckStore {
 
     @Override
     public List<CardDeck> getCardDeck() {
-        List<CardDeck> carddecks = new ArrayList<CardDeck>();
+        List<CardDeck> carddecks = new ArrayList<>();
+
+        Log.d(LOG_TAG, "getCardDeck()");
+        Log.d(LOG_TAG, "getCardDeck : " + database);
+        Log.d(LOG_TAG, "getCardDeck : " + allColumns);
 
         Cursor cursor = database.query(MySQLiteHelper.TABLE_CARDDECKS,
                 allColumns, null, null, null, null, null);

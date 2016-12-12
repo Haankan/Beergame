@@ -9,11 +9,11 @@ import android.util.Log;
 
 import com.example.hannes.beergame.common.CardDeck;
 
-// import java.lang.reflect.Member;
+
 import java.util.ArrayList;
 import java.util.List;
 
-// import static android.os.Build.VERSION_CODES.M;
+
 
 /**
  * Created by Hannes on 2016-12-05.

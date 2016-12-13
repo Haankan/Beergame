@@ -5,11 +5,13 @@ package com.example.hannes.beergame.Storage;
  */
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import static java.sql.Types.INTEGER;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class MySQLiteHelper extends SQLiteOpenHelper {
@@ -121,7 +123,10 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         database.execSQL("INSERT INTO " + TABLE_CARDS + " VALUES (51, 4, 13)");
         database.execSQL("INSERT INTO " + TABLE_CARDS + " VALUES (52, 4, 14)");
 
-        database.execSQL("INSERT INTO " + TABLE_CARDDECKS + " VALUES (1, 'Standard')");
+        database.execSQL("INSERT INTO " + TABLE_CARDDECKS + " VALUES (1, 'Standarddd')");
+        database.execSQL("INSERT INTO " + TABLE_CARDDECKS + " VALUES (2, 'Viktors')");
+        database.execSQL("INSERT INTO " + TABLE_CARDDECKS + " VALUES (3, 'Hannes')");
+
 
         database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (1, 1, 'Drick')");
         database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (1, 2, 'Drick')");
@@ -176,6 +181,30 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (1, 51, 'Drick')");
         database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (1, 52, 'Drick')");
 
+
+        }
+    public List<String> getAllDecks(){
+        List<String> decks = new ArrayList<String>();
+
+        // Select All Query
+        String selectQuery = "SELECT  * FROM " + TABLE_CARDDECKS;
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
+                decks.add(cursor.getString(1));
+            } while (cursor.moveToNext());
+        }
+
+        // closing connection
+        cursor.close();
+        db.close();
+
+        // returning lables
+        return decks;
     }
 
     @Override

@@ -12,7 +12,7 @@
     tools:context="com.example.hannes.beergame.instructionsActivity">
 
 
-    <!--  <TextView
+    <TextView
          android:textColor="#0a0a0a"
          android:text="@string/instruktionerna"
 
@@ -42,13 +42,8 @@
          android:layout_centerHorizontal="true"
 
          android:id="@+id/textView3" />
- -->
-    <ListView
-        android:id="@+id/carddeck_list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+
+
 
 </RelativeLayout>
 

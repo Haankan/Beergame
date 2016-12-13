@@ -50,7 +50,8 @@
         android:id="@+id/button4"
         android:layout_below="@+id/linearLayout"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp"
+        android:onClick=""/>
 
     <TextView
         android:text="TextView"
@@ -58,7 +59,7 @@
         android:layout_height="150dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="5dp"
-        android:id="@+id/textView"
+        android:id="@+id/TextView2"
         android:layout_below="@+id/button4"
         android:layout_marginTop="20dp"
         android:background="@drawable/main_instrruta"

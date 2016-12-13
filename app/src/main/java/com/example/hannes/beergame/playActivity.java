@@ -31,7 +31,9 @@ public class playActivity extends AppCompatActivity {
         setContentView(R.layout.activity_play);
 
         Button button5 =(Button) findViewById(R.id.button4);
-        button5.setOnClickListener(new OnClickListener(){
+        button5.setOnClickListener(new View.OnClickListener(){
+
+            @Override
             public void onClick(View v){
                 Intent intent = new Intent(playActivity.this, CardRandomizer.class);
                 startActivity(intent);

@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.hannes.beergame.logic.CardRandomizer;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -37,7 +39,9 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, choosedeckActivity.class);
                 startActivity(intent);
             }
+
         });
+
 
     }
 

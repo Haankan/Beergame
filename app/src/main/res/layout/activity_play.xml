@@ -36,7 +36,7 @@
             app:srcCompat="@drawable/kortrygg_tbg"
             android:id="@+id/card"
             android:clickable="true"
-            android:onClick="imageClick"
+
             android:layout_weight="1"
             android:layout_marginRight="-15dp"/>
     </LinearLayout>
@@ -54,6 +54,7 @@
         android:layout_below="@+id/linearLayout"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
+        android:onClick="imageClick"
         />
 
     <TextView

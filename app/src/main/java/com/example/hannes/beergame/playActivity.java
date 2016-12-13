@@ -45,7 +45,7 @@ public class playActivity extends AppCompatActivity {
                 Random rand = new Random();
                 //if the list is empty set it to getIds
                 if(cardList.size()== 0){
-                    id = getResources().getIdentifier("com.example.hannes.beergame:drawable/" + "back", null, null);
+                    id = getResources().getIdentifier("com.example.hannes.beergame:drawable/" + "ace_of_clubs", null, null);
                     cardList = cardRandomizer.getIDs(context);
                     Log.e("!","New Deck");
                 }
@@ -66,4 +66,6 @@ public class playActivity extends AppCompatActivity {
     }
 
 
+    public void imageClick(View view) {
+    }
 }

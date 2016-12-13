@@ -47,14 +47,14 @@
         android:layout_height="100dp"
         android:layout_gravity="center"
         tools:textColor="@android:color/black"
-        android:background="@drawable/kortrygg_tbg"
+        android:background="@drawable/main_play_button"
         android:textSize="19sp"
         android:onClick="imageClick"
         android:id="@+id/button4"
         android:layout_below="@+id/linearLayout"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:onClick="imageClick"
+
         />
 
     <TextView

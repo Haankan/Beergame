@@ -30,7 +30,7 @@ public class choosedeckActivity extends AppCompatActivity implements
         MySQLiteHelper db = new MySQLiteHelper(getApplicationContext());
 
         // Spinner Drop down elements
-        List<String> decks = db.getAllDecks();
+        List<String> decks = db.getAllinstructions();
 
         // Creating adapter for spinner
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,

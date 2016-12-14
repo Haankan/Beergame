@@ -24,5 +24,6 @@ public class Instructions {
     public String instruction() {
         return instruction;
     }
-
+    public int CardDeckId() { return CardDeckId;}
+    public int CardId() { return CardId;}
 }

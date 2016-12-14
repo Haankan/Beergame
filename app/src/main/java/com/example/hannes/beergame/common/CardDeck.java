@@ -18,8 +18,8 @@ public class CardDeck {
         return name;
     }
 
-    public String name() {return name;
-    }
+    public String name() {return name;}
+
 
 
 

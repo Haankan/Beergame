@@ -183,7 +183,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 
 
         }
-    public List<String> getAllDecks(){
+    public List<String> getAllinstructions(){
         List<String> decks = new ArrayList<String>();
 
         // Select All Query
@@ -195,7 +195,9 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         // looping through all rows and adding to list
         if (cursor.moveToFirst()) {
             do {
+
                 decks.add(cursor.getString(1));
+
             } while (cursor.moveToNext());
         }
 

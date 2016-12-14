@@ -9,9 +9,13 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.hannes.beergame.common.Card;
+import com.example.hannes.beergame.logic.CardDeckLogic;
+import com.example.hannes.beergame.logic.CardLogic;
 import com.example.hannes.beergame.logic.CardRandomizer;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class playActivity extends AppCompatActivity {
@@ -22,8 +26,15 @@ public class playActivity extends AppCompatActivity {
         setContentView(R.layout.activity_play);
     } */
 
+    private static Card       currentCard ;
+    private static List<Card> currentCards ;
+
     CardRandomizer cardRandomizer = new CardRandomizer();
     Context context = this;
+    private CardLogic cl  = new CardLogic(this);
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +45,7 @@ public class playActivity extends AppCompatActivity {
             //Set variables
             int id;
             //Create arraylist
-            ArrayList<Integer> cardList = new ArrayList<Integer>();
+//            ArrayList<Integer> cardList = new ArrayList<Integer>();
             //Get counter textview
             TextView Counter =(TextView) findViewById(R.id.counter);
 
@@ -44,23 +55,29 @@ public class playActivity extends AppCompatActivity {
                 Counter.setText("New Game");
                 Random rand = new Random();
                 //if the list is empty set it to getIds
-                if(cardList.size()== 0){
+                if(cl.getInstructions().size()== 0){
                     id = getResources().getIdentifier("com.example.hannes.beergame:drawable/" + "kortrygg_tbg", null, null);
-                    cardList = cardRandomizer.getIDs(context);
+                    //   cardList = cardRandomizer.getIDs(context);
                     Log.e("!","New Deck");
                 }
                 //else pick a random card, display it on the image view and remove it from the array
                 else{
-                    int r = rand.nextInt(cardList.size());
-                    id = cardList.get(r);
-                    String name = getResources().getResourceEntryName(id);
-                    Log.e("name",""+name);
-                    Log.e("Array", "" + cardList);
-                    cardList.remove(r);
-                    Counter.setText(Integer.toString(cardList.size()));
+                    int r  = rand.nextInt(currentCards.size());
+                    currentCard = currentCards.get(r);
+                    // String name = getResources().getResourceEntryName(id);
+                    //Log.e("name",""+name);
+                    Log.e("Array", "" + currentCards);
+
+                    currentCards.remove(r);
+                    Counter.setText(Integer.toString(currentCards.size()));
                 }
 
-                imgView.setImageResource(id);
+
+                Log.d("pA", "  cards: " + currentCards.size());
+                Log.d("pA", "  card:  " +    currentCard);
+                Log.d("pA", "  id:    " +    currentCard.CardId());
+
+//                imgView.setImageResource(id);
             }
         });
     }

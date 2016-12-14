@@ -28,9 +28,9 @@ public class playActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play);
-        Button changeMebtn = (Button) findViewById(R.id.button4);
+        Button changeview = (Button) findViewById(R.id.button4);
         final ImageView imgView = (ImageView) findViewById(R.id.card);
-        changeMebtn.setOnClickListener(new View.OnClickListener() {
+        changeview.setOnClickListener(new View.OnClickListener() {
             //Set variables
             int id;
             //Create arraylist

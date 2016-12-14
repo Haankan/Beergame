@@ -5,4 +5,24 @@ package com.example.hannes.beergame.common;
  */
 
 public class Instructions {
+
+    private int CardDeckId;
+    private int CardId;
+    private String instruction;
+
+    public Instructions(int CardDeckId,int CardId, String instruction){
+        this.CardDeckId = CardDeckId;
+        this.CardId = CardId;
+        this.instruction = instruction;
+    }
+
+    @Override
+    public String toString() {
+        return instruction;
+    }
+
+    public String instruction() {
+        return instruction;
+    }
+
 }

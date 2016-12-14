@@ -7,7 +7,7 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
-import com.example.hannes.beergame.common.Instructions;
+import com.example.hannes.beergame.common.Card;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,10 +16,10 @@ import java.util.List;
  * Created by Hannes on 2016-12-14.
  */
 
-public class DBInstructionsStore implements InstructionsStore{
-    private static DBInstructionsStore storage ;
+public class DBCardStore implements CardStore {
+    private static DBCardStore storage ;
 
-    private static final String LOG_TAG = DBInstructionsStore.class.getName();
+    private static final String LOG_TAG = DBCardStore.class.getName();
 
     // Database fields
     private SQLiteDatabase database;
@@ -27,7 +27,7 @@ public class DBInstructionsStore implements InstructionsStore{
     private String[] allColumns = { MySQLiteHelper.INSTR_COLUMN_INSTRUCTIONS,
             MySQLiteHelper.INSTR_COLUMN_CARDDECKSID, MySQLiteHelper.INSTR_COLUMN_CARDSID };
 
-    public DBInstructionsStore(Context context)  {
+    public DBCardStore(Context context)  {
         dbHelper = new MySQLiteHelper(context);
         try {
             open();
@@ -36,7 +36,7 @@ public class DBInstructionsStore implements InstructionsStore{
         }
     }
 
-    public Instructions createInstructions(Instructions m) {
+    public Card createInstructions(Card m) {
         ContentValues values = new ContentValues();
 
         values.put(MySQLiteHelper.INSTR_COLUMN_INSTRUCTIONS, m.instruction());
@@ -50,19 +50,19 @@ public class DBInstructionsStore implements InstructionsStore{
                 allColumns, MySQLiteHelper.DECKS_COLUMN_ID + " = " + insertId, null,
                 null, null, null);
         cursor.moveToFirst();
-        Instructions newInstructions = cursorToInstructions(cursor);
+        Card newInstructions = cursorToInstructions(cursor);
         cursor.close();
         Log.d("db" ," storing carddeck");
         return newInstructions;
     }
 
-    private Instructions cursorToInstructions(Cursor cursor) {
+    private Card cursorToInstructions(Cursor cursor) {
         long id = cursor.getLong(0);
 
         int CardDeckId = cursor.getInt(1);
         int CardId = cursor.getInt(2);
         String instruction = cursor.getString(3);
-        return new Instructions(CardDeckId, CardId, instruction);
+        return new Card(CardDeckId, CardId, instruction);
     }
 
     public void open() throws SQLException {
@@ -77,8 +77,8 @@ public class DBInstructionsStore implements InstructionsStore{
     }
 
     @Override
-    public List<Instructions> getInstructions() {
-        List<Instructions> instructions = new ArrayList<>();
+    public List<Card> getInstructions() {
+        List<Card> instructions = new ArrayList<>();
 
         Log.d(LOG_TAG, "getCardDeck()");
         Log.d(LOG_TAG, "getCardDeck : " + database);
@@ -89,7 +89,7 @@ public class DBInstructionsStore implements InstructionsStore{
 
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
-            Instructions m = cursorToInstructions(cursor);
+            Card m = cursorToInstructions(cursor);
             instructions.add(m);
             cursor.moveToNext();
         }
@@ -98,7 +98,7 @@ public class DBInstructionsStore implements InstructionsStore{
         return instructions;
     }
 
-    public void addInstructions(Instructions m) {
+    public void addInstructions(Card m) {
         createInstructions(m);
     }
 

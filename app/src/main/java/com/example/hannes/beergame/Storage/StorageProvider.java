@@ -10,8 +10,8 @@ public class StorageProvider {
     public static CardDeckStore getCardDeckStore(Context c) {
         return new DBCardDeckStore(c);
     }
-    public static InstructionsStore getInstructionsStore(Context c) {
-        return new DBInstructionsStore(c);
+    public static CardStore getInstructionsStore(Context c) {
+        return new DBCardStore(c);
 
     }
 }

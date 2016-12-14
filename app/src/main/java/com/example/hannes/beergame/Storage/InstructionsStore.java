@@ -1,6 +1,7 @@
 package com.example.hannes.beergame.Storage;
 
 import com.example.hannes.beergame.common.CardDeck;
+import com.example.hannes.beergame.common.Instructions;
 
 import java.util.List;
 
@@ -10,5 +11,5 @@ import java.util.List;
 
 public interface InstructionsStore {
     public List<Instructions> getInstructions();
-    public void addInstrutions(Instructions m);
+    public void addInstructions(Instructions m);
 }

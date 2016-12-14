@@ -36,12 +36,11 @@ public class DBCardStore implements CardStore {
         }
     }
 
-    public Card createInstructions(Card m) {
+    public Card createCard(Card m) {
         ContentValues values = new ContentValues();
-
-        values.put(MySQLiteHelper.INSTR_COLUMN_INSTRUCTIONS, m.instruction());
         values.put(MySQLiteHelper.INSTR_COLUMN_CARDDECKSID, m.CardDeckId());
         values.put(MySQLiteHelper.INSTR_COLUMN_CARDSID, m.CardId());
+        values.put(MySQLiteHelper.INSTR_COLUMN_INSTRUCTIONS, m.instruction());
         //values.put(MySQLiteHelper.COLUMN_EMAIL, m.());
 
         long insertId = database.insert(MySQLiteHelper.TABLE_GAMEINSTRUCTIONS, null,
@@ -57,11 +56,11 @@ public class DBCardStore implements CardStore {
     }
 
     private Card cursorToInstructions(Cursor cursor) {
-        long id = cursor.getLong(0);
+        //long id = cursor.getLong(0)
 
-        int CardDeckId = cursor.getInt(1);
-        int CardId = cursor.getInt(2);
-        String instruction = cursor.getString(3);
+        int CardDeckId = cursor.getInt(0);
+        int CardId = cursor.getInt(1);
+        String instruction = cursor.getString(2);
         return new Card(CardDeckId, CardId, instruction);
     }
 
@@ -77,7 +76,7 @@ public class DBCardStore implements CardStore {
     }
 
     @Override
-    public List<Card> getInstructions() {
+    public List<Card> getCard() {
         List<Card> instructions = new ArrayList<>();
 
         Log.d(LOG_TAG, "getCardDeck()");
@@ -98,8 +97,8 @@ public class DBCardStore implements CardStore {
         return instructions;
     }
 
-    public void addInstructions(Card m) {
-        createInstructions(m);
+    public void addCard(Card m) {
+        createCard(m);
     }
 
 }

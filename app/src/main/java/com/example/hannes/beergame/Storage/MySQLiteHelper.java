@@ -51,9 +51,9 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 
      private static final String GAMEINSTRUCTIONS_TABLE_CREATE = "create table "
             + TABLE_GAMEINSTRUCTIONS + "( "
-             + INSTR_COLUMN_INSTRUCTIONS +  " text not null,"
              + INSTR_COLUMN_CARDDECKSID  + " integer,"
              + INSTR_COLUMN_CARDSID      + " integer,"
+             + INSTR_COLUMN_INSTRUCTIONS +  " text not null,"
              + " FOREIGN KEY (" + INSTR_COLUMN_CARDDECKSID + ")  REFERENCES " + TABLE_CARDDECKS + "("+DECKS_COLUMN_ID+"),"
              + " FOREIGN KEY (" + INSTR_COLUMN_CARDSID     + ")  REFERENCES " + TABLE_CARDS+"("+CARDS_COLUMN_ID+")" +
              ");";

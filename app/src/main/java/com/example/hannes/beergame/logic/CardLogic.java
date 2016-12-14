@@ -19,12 +19,12 @@ public class CardLogic {
             this.c = c;
         }
 
-        public List<Card> getInstructions() {
-            return StorageProvider.getInstructionsStore(c).getInstructions();
+        public List<Card> getCard() {
+            return StorageProvider.getCardStore(c).getCard();
         }
 
         public void addIntructions(Card m) {
-            StorageProvider.getInstructionsStore(c).addInstructions(m);
+            StorageProvider.getCardStore(c).addCard(m);
         }
 
 

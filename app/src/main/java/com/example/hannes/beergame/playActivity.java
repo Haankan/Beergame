@@ -10,11 +10,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.hannes.beergame.common.Card;
-import com.example.hannes.beergame.logic.CardDeckLogic;
 import com.example.hannes.beergame.logic.CardLogic;
 import com.example.hannes.beergame.logic.CardRandomizer;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -55,13 +53,15 @@ public class playActivity extends AppCompatActivity {
                 Counter.setText("New Game");
                 Random rand = new Random();
                 //if the list is empty set it to getIds
-                if(cl.getInstructions().size()== 0){
+                
+                if(cl.getCard().size()== 0){
                     id = getResources().getIdentifier("com.example.hannes.beergame:drawable/" + "kortrygg_tbg", null, null);
                     //   cardList = cardRandomizer.getIDs(context);
                     Log.e("!","New Deck");
                 }
                 //else pick a random card, display it on the image view and remove it from the array
                 else{
+                    Log.e("Array", "" + currentCards);
                     int r  = rand.nextInt(currentCards.size());
                     currentCard = currentCards.get(r);
                     // String name = getResources().getResourceEntryName(id);

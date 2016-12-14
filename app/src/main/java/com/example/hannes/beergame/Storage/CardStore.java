@@ -9,6 +9,6 @@ import java.util.List;
  */
 
 public interface CardStore {
-    public List<Card> getInstructions();
-    public void addInstructions(Card m);
+    public List<Card> getCard();
+    public void addCard(Card m);
 }

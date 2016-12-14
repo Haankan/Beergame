@@ -3,7 +3,7 @@ package com.example.hannes.beergame.logic;
 import android.content.Context;
 
 import com.example.hannes.beergame.Storage.StorageProvider;
-import com.example.hannes.beergame.common.CardDeck;
+import com.example.hannes.beergame.common.Instructions;
 
 import java.util.List;
 

@@ -8,13 +8,10 @@ import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
 import com.example.hannes.beergame.common.CardDeck;
+import com.example.hannes.beergame.common.Instructions;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.example.hannes.beergame.Storage.MySQLiteHelper.INSTR_COLUMN_CARDDECKSID;
-import static com.example.hannes.beergame.Storage.MySQLiteHelper.INSTR_COLUMN_CARDSID;
-import static com.example.hannes.beergame.Storage.MySQLiteHelper.INSTR_COLUMN_INSTRUCTIONS;
 
 /**
  * Created by Hannes on 2016-12-14.
@@ -100,8 +97,8 @@ public class DBInstructionsStore implements InstructionsStore{
         return carddecks;
     }
 
-    public void addCardDeck(CardDeck m) {
-        createCardDeck(m);
+    public void addInstructions(Instructions m) {
+        createInstructions(m);
     }
 
 }

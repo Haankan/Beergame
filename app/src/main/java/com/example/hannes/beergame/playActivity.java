@@ -53,7 +53,7 @@ public class playActivity extends AppCompatActivity {
                 Counter.setText("New Game");
                 Random rand = new Random();
                 //if the list is empty set it to getIds
-                
+
                 if(cl.getCard().size()== 0){
                     id = getResources().getIdentifier("com.example.hannes.beergame:drawable/" + "kortrygg_tbg", null, null);
                     //   cardList = cardRandomizer.getIDs(context);
@@ -61,8 +61,12 @@ public class playActivity extends AppCompatActivity {
                 }
                 //else pick a random card, display it on the image view and remove it from the array
                 else{
-                    Log.e("Array", "" + currentCards);
-                    int r  = rand.nextInt(currentCards.size());
+
+                    Log.e("Array", "" + cl.getCard().size());
+                    Log.e("Array", "" );
+                    currentCards = cl.getCard();
+                    int r  = rand.nextInt(cl.getCard().size());
+                    Log.e("Array", "" + cl.getCard().size());
                     currentCard = currentCards.get(r);
                     // String name = getResources().getResourceEntryName(id);
                     //Log.e("name",""+name);

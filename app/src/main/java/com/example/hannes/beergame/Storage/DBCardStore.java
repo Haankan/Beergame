@@ -10,6 +10,7 @@ import android.util.Log;
 import com.example.hannes.beergame.common.Card;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -24,8 +25,8 @@ public class DBCardStore implements CardStore {
     // Database fields
     private SQLiteDatabase database;
     private MySQLiteHelper dbHelper;
-    private String[] allColumns = { MySQLiteHelper.INSTR_COLUMN_INSTRUCTIONS,
-            MySQLiteHelper.INSTR_COLUMN_CARDDECKSID, MySQLiteHelper.INSTR_COLUMN_CARDSID };
+    private String[] allColumns = {MySQLiteHelper.INSTR_COLUMN_CARDDECKSID,
+            MySQLiteHelper.INSTR_COLUMN_CARDSID, MySQLiteHelper.INSTR_COLUMN_INSTRUCTIONS };
 
     public DBCardStore(Context context)  {
         dbHelper = new MySQLiteHelper(context);
@@ -81,7 +82,7 @@ public class DBCardStore implements CardStore {
 
         Log.d(LOG_TAG, "getCardDeck()");
         Log.d(LOG_TAG, "getCardDeck : " + database);
-        Log.d(LOG_TAG, "getCardDeck : " + allColumns);
+        Log.d(LOG_TAG, "getCardDeck : " + Arrays.toString(allColumns));
 
         Cursor cursor = database.query(MySQLiteHelper.TABLE_GAMEINSTRUCTIONS,
                 allColumns, null, null, null, null, null);

@@ -55,9 +55,9 @@ public class playActivity extends AppCompatActivity {
                 Random rand = new Random();
                 //if the list is empty set it to getIds
 
-                if(cl.getCard().size()== 52){
-                    id = getResources().getIdentifier("com.example.hannes.beergame:drawable/" + "kortrygg_tbg", null, null);
-                    //   cardList = cardRandomizer.getIDs(context);
+                if(currentCards == null || currentCards.size() ==0){
+                   // id = getResources().getIdentifier("com.example.hannes.beergame:drawable/" + "kortrygg_tbg", null, null);
+                     // cardList = cardRandomizer.getIDs(context);
                     Log.e("!","New Deck");
                     currentCards = cl.getCard();
 

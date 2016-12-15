@@ -50,37 +50,42 @@ public class playActivity extends AppCompatActivity {
             @Override
             //Action to perform on click
             public void onClick(View v) {
+
                 Counter.setText("New Game");
                 Random rand = new Random();
                 //if the list is empty set it to getIds
 
-                if(cl.getCard().size()== 0){
+                if(cl.getCard().size()== 52){
                     id = getResources().getIdentifier("com.example.hannes.beergame:drawable/" + "kortrygg_tbg", null, null);
                     //   cardList = cardRandomizer.getIDs(context);
                     Log.e("!","New Deck");
+                    currentCards = cl.getCard();
+
                 }
                 //else pick a random card, display it on the image view and remove it from the array
                 else{
 
                     Log.e("Array", "" + cl.getCard().size());
                     Log.e("Array", "" );
-                    currentCards = cl.getCard();
+                    //currentCards = cl.getCard();
                     int r  = rand.nextInt(cl.getCard().size());
                     Log.e("Array", "" + cl.getCard().size());
                     currentCard = currentCards.get(r);
                     // String name = getResources().getResourceEntryName(id);
                     //Log.e("name",""+name);
                     Log.e("Array", "" + currentCards);
-
+                    Log.d("pA", "  id:    " +    currentCard.CardId());
                     currentCards.remove(r);
                     Counter.setText(Integer.toString(currentCards.size()));
+                    Log.d("pA", "  id:    " +    currentCard.CardId());
                 }
 
 
                 Log.d("pA", "  cards: " + currentCards.size());
                 Log.d("pA", "  card:  " +    currentCard);
-                Log.d("pA", "  id:    " +    currentCard.CardId());
-
+//                Log.d("pA", "  id:    " +    currentCard.CardId());
+  //              Log.d("pA", "  ins:    " +    currentCard.instruction());
+    //            Log.d("pA", "  carddeck:    " +    currentCard.CardDeckId());
 //                imgView.setImageResource(id);
             }
         });

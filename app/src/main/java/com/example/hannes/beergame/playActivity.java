@@ -152,7 +152,7 @@ public class playActivity extends AppCompatActivity {
                     Log.d("pA", "  id:    " +    currentCard.CardId());
                     Log.d("pA", "  ins:    " +    currentCard.instruction());
                     Log.d("pA", "  cardDeck:    " +    currentCard.CardDeckId());
-                    imgView.setImageResource(myImageList.get(r+1));
+                    imgView.setImageResource(myImageList.get(r));
                     myImageList.remove(r);
                 }
 

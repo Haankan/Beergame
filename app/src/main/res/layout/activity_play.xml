@@ -61,7 +61,8 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/main_instrruta"
 
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textAppearance="@android:style/TextAppearance.Material.Large" />
 
     <LinearLayout
         android:orientation="vertical"

@@ -27,7 +27,7 @@ public class CardRandomizer {
                 resourceId = fields[i].getInt(drawableResources);
                 String name = context.getResources().getResourceEntryName(resourceId);
                 //Use regex to filter out system ressources
-                if (name.matches("(clubs|spades|diamonds|hearts).*"))
+                if (name.matches("(h|s|r|k).*"))
                     res.add(resourceId);
             } catch (Exception e) {
                 continue;

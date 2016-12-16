@@ -27,6 +27,7 @@ public class playActivity extends AppCompatActivity {
     private static Card       currentCard ;
     private static List<Card> currentCards ;
 
+
     CardRandomizer cardRandomizer = new CardRandomizer();
     Context context = this;
     private CardLogic cl  = new CardLogic(this);
@@ -60,7 +61,7 @@ public class playActivity extends AppCompatActivity {
                 //if the list is empty set it to getIds
 
                 if(currentCards == null || currentCards.size() ==0){
-                   id = getResources().getIdentifier("com.example.hannes.beergame:drawable/" + "kortrygg_tbg", null, null);
+                 //  id = getResources().getIdentifier("com.example.hannes.beergame:drawable/" + "kortrygg_tbg", null, null);
                      // cardList = cardRandomizer.getIDs(context);
                     Log.e("!","New Deck");
                     currentCards = cl.getCard();
@@ -81,6 +82,7 @@ public class playActivity extends AppCompatActivity {
                     Log.e("Array", "" + currentCards);
                     Log.d("pA", "  id:    " +    currentCard.CardId());
                     currentCards.remove(r);
+
                    // Counter.setText(Integer.toString(currentCards.size()));
                     Counter.setText(currentCard.instruction());
 

@@ -70,6 +70,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         database.execSQL(DECKS_TABLE_CREATE);
         Log.d(LOG_TAG, "create game instructions: " + GAMEINSTRUCTIONS_TABLE_CREATE);
         database.execSQL(GAMEINSTRUCTIONS_TABLE_CREATE);
+        //typer 1 = hjärter 2 = spader 3 ruter 4 = klöver
         database.execSQL("INSERT INTO " + TABLE_CARDS + " VALUES (1, 1, 2)");
         database.execSQL("INSERT INTO " + TABLE_CARDS + " VALUES (2, 1, 3)");
         database.execSQL("INSERT INTO " + TABLE_CARDS + " VALUES (3, 1, 4)");

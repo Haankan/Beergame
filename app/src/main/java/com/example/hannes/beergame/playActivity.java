@@ -61,7 +61,7 @@ public class playActivity extends AppCompatActivity {
 
                 if(currentCards == null || currentCards.size() ==0){
                     imgView.setImageResource(getResources().getIdentifier("com.example.hannes.beergame:drawable/" + "kortrygg_tbg", null, null));
-                     // cardList = cardRandomizer.getIDs(context);
+
                     Log.e("!","New Deck");
                     currentCards = cl.getCard();
                     myImageList.add(R.drawable.h1);
@@ -93,13 +93,11 @@ public class playActivity extends AppCompatActivity {
                     myImageList.add(drawable.r27);
                     myImageList.add(drawable.r28);
                     myImageList.add(drawable.r29);
-
                     myImageList.add(drawable.r30);
                     myImageList.add(drawable.r31);
                     myImageList.add(drawable.r32);
                     myImageList.add(drawable.r33);
                     myImageList.add(drawable.r34);
-
                     myImageList.add(drawable.r35);
                     myImageList.add(drawable.r36);
                     myImageList.add(drawable.r37);
@@ -108,7 +106,6 @@ public class playActivity extends AppCompatActivity {
                     myImageList.add(drawable.k40);
                     myImageList.add(drawable.k41);
                     myImageList.add(drawable.k42);
-
                     myImageList.add(drawable.k43);
                     myImageList.add(drawable.k44);
                     myImageList.add(drawable.k45);
@@ -116,16 +113,9 @@ public class playActivity extends AppCompatActivity {
                     myImageList.add(drawable.k47);
                     myImageList.add(drawable.k48);
                     myImageList.add(drawable.k49);
-
                     myImageList.add(drawable.k50);
                     myImageList.add(drawable.k51);
                     myImageList.add(drawable.k52);
-
-                  /*          , drawable.h2, drawable.h3, drawable.h4, drawable.h5, drawable.h6, drawable.h6, drawable.h7, drawable.h8, drawable.h9, drawable.h10, drawable.h11, drawable.h12, drawable.h13,
-                            drawable.s14, drawable.s15, drawable.s16, drawable.s17, drawable.s18, drawable.s19, drawable.s20, drawable.s21, drawable.s22, drawable.s23, drawable.s24, drawable.s25, drawable.s26,
-                            drawable.r27, drawable.r28, drawable.r29, drawable.r30, drawable.r31, drawable.r32, drawable.r33, drawable.r34, drawable.r35, drawable.r36, drawable.r37, drawable.r38, drawable.r39,
-                            drawable.k40, drawable.k41, drawable.k42, drawable.k43, drawable.k44, drawable.k45, drawable.k46, drawable.k47, drawable.k48, drawable.k49, drawable.k50, drawable.k51, drawable.k52);
-*/
 
                 }
                 //else pick a random card, display it on the image view and remove it from the array
@@ -138,12 +128,11 @@ public class playActivity extends AppCompatActivity {
 
                     Log.e("Array", "" + cl.getCard().size());
                     currentCard = currentCards.get(r);
-                    // String name = getResources().getResourceEntryName(id);
-                    //Log.e("name",""+name);
+
                     Log.e("Array", "" + currentCards);
                     Log.d("pA", "  id:    " +    currentCard.CardId());
                     currentCards.remove(r);
-                   // Counter.setText(Integer.toString(currentCards.size()));
+
                     Counter.setText(currentCard.instruction());
 
                     Log.d("pA", "  id:    " +    currentCard.CardId());
@@ -152,17 +141,14 @@ public class playActivity extends AppCompatActivity {
                     Log.d("pA", "  id:    " +    currentCard.CardId());
                     Log.d("pA", "  ins:    " +    currentCard.instruction());
                     Log.d("pA", "  cardDeck:    " +    currentCard.CardDeckId());
-                    imgView.setImageResource(myImageList.get(r+1));
+                    imgView.setImageResource(myImageList.get(r));
                     myImageList.remove(r);
                 }
 
 
                 Log.d("pA", "  cards: " + currentCards.size());
                 Log.d("pA", "  card:  " +    currentCard);
-//                Log.d("pA", "  id:    " +    currentCard.CardId());
-  //              Log.d("pA", "  ins:    " +    currentCard.instruction());
-    //            Log.d("pA", "  carddeck:    " +    currentCard.CardDeckId());
-               // imgView.setImageResource(myImageList(r));
+
             }
         });
     }

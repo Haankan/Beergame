@@ -77,7 +77,8 @@ public class playActivity extends AppCompatActivity {
                     Log.e("Array", "" + currentCards);
                     Log.d("pA", "  id:    " +    currentCard.CardId());
                     currentCards.remove(r);
-                    Counter.setText(Integer.toString(currentCards.size()));
+                   // Counter.setText(Integer.toString(currentCards.size()));
+                    Counter.setText(currentCard.instruction());
                     Log.d("pA", "  id:    " +    currentCard.CardId());
                     Log.d("pA", "  cards: " + currentCards.size());
                     Log.d("pA", "  card:  " +    currentCard);

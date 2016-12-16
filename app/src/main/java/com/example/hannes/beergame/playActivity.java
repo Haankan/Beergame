@@ -68,7 +68,8 @@ public class playActivity extends AppCompatActivity {
                     Log.e("Array", "" + cl.getCard().size());
                     Log.e("Array", "" );
                     //currentCards = cl.getCard();
-                    int r  = rand.nextInt(cl.getCard().size());
+                    int r  = rand.nextInt(currentCards.size());
+
                     Log.e("Array", "" + cl.getCard().size());
                     currentCard = currentCards.get(r);
                     // String name = getResources().getResourceEntryName(id);

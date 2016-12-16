@@ -1,11 +1,13 @@
 package com.example.hannes.beergame;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -24,6 +26,16 @@ public class choosedeckActivity extends AppCompatActivity implements
         spinner = (Spinner) findViewById(R.id.spinner);
         spinner.setOnItemSelectedListener((OnItemSelectedListener) this);
         loadSpinnerData();
+        initiateButtons();
+    }
+    private void initiateButtons() {
+        Button button5 = (Button) findViewById(R.id.button5);
+        button5.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(choosedeckActivity.this, playActivity.class);
+                startActivity(intent);
+            }
+        });
     }
     private void loadSpinnerData() {
         // database handler

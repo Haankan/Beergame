@@ -78,16 +78,16 @@ public class playActivity extends AppCompatActivity {
                     Log.d("pA", "  id:    " +    currentCard.CardId());
                     currentCards.remove(r);
                     Counter.setText(Integer.toString(currentCards.size()));
-                    Log.d("pA", "  id:    " +    currentCard.CardId());
+                        Log.d("pA", "  id:    " +    currentCard.CardId());
+                        Log.d("pA", "  cards: " + currentCards.size());
+                        Log.d("pA", "  card:  " +    currentCard);
+                        Log.d("pA", "  id:    " +    currentCard.CardId());
+                        Log.d("pA", "  ins:    " +    currentCard.instruction());
+                        Log.d("pA", "  carddeck:    " +    currentCard.CardDeckId());
                 }
 
 
-                Log.d("pA", "  cards: " + currentCards.size());
-                Log.d("pA", "  card:  " +    currentCard);
-//               Log.d("pA", "  id:    " +    currentCard.CardId());
-//             Log.d("pA", "  ins:    " +    currentCard.instruction());
-//              Log.d("pA", "  carddeck:    " +    currentCard.CardDeckId());
-//                imgView.setImageResource(id);
+//               imgView.setImageResource(id);
             }
         });
     }

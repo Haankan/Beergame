@@ -1,12 +1,10 @@
 package com.example.hannes.beergame;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-
-import com.example.hannes.beergame.logic.CardRandomizer;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         Button button =(Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Intent intent = new Intent(MainActivity.this, playActivity.class);
+                Intent intent = new Intent(MainActivity.this, choosedeckActivity.class);
                 startActivity(intent);
             }
         });

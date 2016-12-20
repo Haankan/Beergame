@@ -9,4 +9,5 @@
     <string name="kortlek">Choose CardDeck</string>
     <string name="Edit">Edit</string>
     <string name="CreateDeck">Create Deck</string>
+    <string name="choose">Välj ett alternativ</string>
 </resources>

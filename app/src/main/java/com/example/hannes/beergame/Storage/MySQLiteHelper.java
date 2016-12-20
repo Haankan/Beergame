@@ -182,6 +182,59 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (1, 51, 'Drick51')");
         database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (1, 52, 'Drick52')");
 
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 1, 'Dricsdfk1')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 2, 'Ddsfrick2')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 3, 'Dricdsfsdfk3')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 4, 'dfDrickdsfd4')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 5, 'Ddfdsrick5')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 6, 'Drdsfick6')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 7, 'Drdfsdick7')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 8, 'Dricdfk8')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 9, 'Dricdffddsk9')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 10, 'Dric10dsfk')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 11, 'Dridfdfck11')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 12, 'Dsdfrick12')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 13, 'Drddffdsfsick13')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 14, 'Ddsfrick14')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 15, 'Drdsfdsfick15')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 16, 'Drdsfsdfick16')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 17, 'Drdsfsdfick17')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 18, 'Dridsfsdfck18')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 19, 'Drdsfsdfick19')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 20, 'Drdsfsdfick20')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 21, 'Drdsfsdfick21')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 22, 'Dridsfsdfck22')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 23, 'Dridsfsdfck23')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 24, 'Dridsffck24')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 25, 'Dridfsfsdck25')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 26, 'Drisdfdsfck26')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 27, 'Dridsfsdfck27')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 28, 'Dridsfsdfck28')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 29, 'Dridsfsdfck29')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 30, 'Drdsffsdick30')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 31, 'Drisdfsdfck31')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 32, 'Drdsfsdck32')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 33, 'Drifsdfdsck33')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 34, 'Drfdsfsdfick34')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 35, 'Drsdfsdfick35')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 36, 'Drsdfsdfick36')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 37, 'Dsdfsdfrick37')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 38, 'Drisdfsdck38')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 39, 'Drsdfsdfick39')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 40, 'Ddsfdsfrick40')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 41, 'Dsdfdsick41')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 42, 'Drfsdfick42')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 43, 'Dridsfdsck43')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 44, 'Dridsfsdfck44')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 45, 'Drifdsfck45')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 46, 'Dridsfdsfck46')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 47, 'Drifsdfsdck47')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 48, 'Drsdfsdick48')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 49, 'Drifsdfck49')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 50, 'Dridsfsdfck50')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 51, 'Drisdfdsfck51')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (2, 52, 'Drdsfck52')");
+
 
         }
     public List<String> getAllinstructions(){
@@ -194,6 +247,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery(selectQuery, null);
 
         // looping through all rows and adding to list
+        decks.add("Choose deck");
         if (cursor.moveToFirst()) {
             do {
 

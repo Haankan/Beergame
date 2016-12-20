@@ -7,4 +7,6 @@
     <string name="instruktionerna">Här ska de komma fult med isntruktioner som ska lära alla små barn att dricka öl ute helvete
     och sen spy ner sig och sedan fortsätta dricka en helvetes massa öl</string>
     <string name="kortlek">Choose CardDeck</string>
+    <string name="Edit">Edit</string>
+    <string name="CreateDeck">Create Deck</string>
 </resources>

@@ -5,14 +5,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/bakgrunddd"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.hannes.beergame.customizeActivity">
 
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"></LinearLayout>
+        android:layout_alignParentTop="true">
+
+
+        <Button
+            android:text="@string/CreateDeck"
+            android:layout_width="190dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="170dp"
+            android:layout_gravity="center"
+            tools:textColor="@android:color/white"
+            android:background="@drawable/main_button"
+            android:id="@+id/button9" />
+
+        <Button
+            android:text="@string/Edit"
+            android:layout_width="190dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            tools:textColor="@android:color/white"
+            android:background="@drawable/main_button"
+            android:id="@+id/button10" />
+    </LinearLayout>
 </RelativeLayout>

@@ -27,9 +27,9 @@ public class playActivity extends AppCompatActivity {
         setContentView(R.layout.activity_play);
     } */
 
-    private static Card       currentCard ;
-    private static List<Card> currentCards ;
-    private static ArrayList<Integer> myImageList = new ArrayList<>();
+    private  Card       currentCard ;
+    private  List<Card> currentCards ;
+    private  ArrayList<Integer> myImageList = new ArrayList<>();
 
     CardRandomizer cardRandomizer = new CardRandomizer();
     Context context = this;

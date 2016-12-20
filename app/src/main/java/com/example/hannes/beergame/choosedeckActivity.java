@@ -3,6 +3,7 @@ package com.example.hannes.beergame;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
@@ -17,7 +18,7 @@ import java.util.List;
 
 public class choosedeckActivity extends AppCompatActivity implements
         OnItemSelectedListener {
-
+    public static int spinn;
     Spinner spinner;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +33,12 @@ public class choosedeckActivity extends AppCompatActivity implements
         Button button5 = (Button) findViewById(R.id.button5);
         button5.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(choosedeckActivity.this, playActivity.class);
-                startActivity(intent);
+                if(spinn==0){
+                    Toast.makeText(getBaseContext(), "Välj kortlek" , Toast.LENGTH_SHORT ).show();
+                }else {
+                    Intent intent = new Intent(choosedeckActivity.this, playActivity.class);
+                    startActivity(intent);
+                }
             }
         });
     }
@@ -45,15 +50,17 @@ public class choosedeckActivity extends AppCompatActivity implements
         List<String> decks = db.getAllinstructions();
 
         // Creating adapter for spinner
-        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
+          ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, decks);
 
         // Drop down layout style - list view with radio button
+        spinner.setPrompt("Select an item");
         dataAdapter
-                .setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
+                .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         // attaching data adapter to spinner
         spinner.setAdapter(dataAdapter);
+
 
     }
 
@@ -63,10 +70,15 @@ public class choosedeckActivity extends AppCompatActivity implements
                                long id) {
         // On selecting a spinner item
         String label = parent.getItemAtPosition(position).toString();
+        Log.d("pA", "  cardDeck:    " +   position);
 
-        // Showing selected spinner item
-        Toast.makeText(parent.getContext(), "Du valde kortleken: " + label,
-                Toast.LENGTH_LONG).show();
+        spinn = position;// Showing selected spinner item
+        if(position== 0){
+
+        }else {
+            Toast.makeText(parent.getContext(), "Du valde kortleken: " + label,
+                    Toast.LENGTH_LONG).show();
+        }
 
     }
 

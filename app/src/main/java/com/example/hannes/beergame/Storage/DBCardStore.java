@@ -13,6 +13,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static com.example.hannes.beergame.Storage.MySQLiteHelper.INSTR_COLUMN_CARDDECKSID;
+import static com.example.hannes.beergame.choosedeckActivity.spinn;
+
 /**
  * Created by Hannes on 2016-12-14.
  */
@@ -25,7 +28,7 @@ public class DBCardStore implements CardStore {
     // Database fields
     private SQLiteDatabase database;
     private MySQLiteHelper dbHelper;
-    private String[] allColumns = {MySQLiteHelper.INSTR_COLUMN_CARDDECKSID,
+    private String[] allColumns = {INSTR_COLUMN_CARDDECKSID,
             MySQLiteHelper.INSTR_COLUMN_CARDSID, MySQLiteHelper.INSTR_COLUMN_INSTRUCTIONS };
 
     public DBCardStore(Context context)  {
@@ -39,7 +42,7 @@ public class DBCardStore implements CardStore {
 
     public Card createCard(Card m) {
         ContentValues values = new ContentValues();
-        values.put(MySQLiteHelper.INSTR_COLUMN_CARDDECKSID, m.CardDeckId());
+        values.put(INSTR_COLUMN_CARDDECKSID, m.CardDeckId());
         values.put(MySQLiteHelper.INSTR_COLUMN_CARDSID, m.CardId());
         values.put(MySQLiteHelper.INSTR_COLUMN_INSTRUCTIONS, m.instruction());
         //values.put(MySQLiteHelper.COLUMN_EMAIL, m.());
@@ -85,7 +88,7 @@ public class DBCardStore implements CardStore {
         Log.d(LOG_TAG, "getCardDeck : " + Arrays.toString(allColumns));
 
         Cursor cursor = database.query(MySQLiteHelper.TABLE_GAMEINSTRUCTIONS,
-                allColumns, null, null, null, null, null);
+                allColumns, INSTR_COLUMN_CARDDECKSID +" ='" + spinn + "'", null, null, null, null);
 
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {

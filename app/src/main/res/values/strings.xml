@@ -10,4 +10,7 @@
     <string name="Edit">Edit</string>
     <string name="CreateDeck">Create Deck</string>
     <string name="choose">Välj ett alternativ</string>
+    <string name="Next">Nästa</string>
+    <string name="save">spara</string>
+
 </resources>

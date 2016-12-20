@@ -43,7 +43,8 @@ public class DBCardDeckStore implements CardDeckStore {
         ContentValues values = new ContentValues();
 
         values.put(MySQLiteHelper.DECKS_COLUMN_NAME, m.name());
-        //values.put(MySQLiteHelper.COLUMN_EMAIL, m.());
+
+
 
         long insertId = database.insert(MySQLiteHelper.TABLE_CARDDECKS, null,
                 values);

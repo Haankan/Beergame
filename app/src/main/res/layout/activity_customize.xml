@@ -16,7 +16,9 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true">
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="28dp">
 
 
         <Button
@@ -29,14 +31,16 @@
             android:background="@drawable/main_button"
             android:id="@+id/button9" />
 
-        <Button
-            android:text="@string/Edit"
-            android:layout_width="190dp"
-            android:layout_height="70dp"
-            android:layout_gravity="center"
+        <EditText
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Namn på din kortlek"
             android:layout_marginTop="20dp"
-            tools:textColor="@android:color/white"
-            android:background="@drawable/main_button"
-            android:id="@+id/button10" />
+            android:layout_gravity="center"
+            android:ems="10"
+            android:background="#fefefe"
+            android:id="@+id/editText3" />
+
     </LinearLayout>
 </RelativeLayout>

@@ -6,10 +6,12 @@ package com.example.hannes.beergame.common;
 
 public class CardDeck {
     private String name;
+   // private String instructions;
 
 
     public CardDeck(String name) {
         this.name = name;
+      //  this.name = instructions;
 
     }
 
@@ -19,6 +21,10 @@ public class CardDeck {
     }
 
     public String name() {return name;}
+
+   // public String instructions() {return instructions;}
+
+
 
 
 

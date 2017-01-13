@@ -12,7 +12,7 @@ public class CreateDeckActivity {
     private String[] instructions;
     private ArrayList<Integer> myImageList = new ArrayList<>();
 
-    imgView.setImageResource(getResources().getIdentifier("com.example.hannes.beergame:drawable/" + "kortrygg_tbg", null, null));
+    imgView.setImageResource(getResources().getIdentifier("com.example.hannes.beergame:drawable/" + "h1", null, null));
     myImageList.add(R.drawable.h1);
     myImageList.add(R.drawable.h2);
     myImageList.add(R.drawable.h3);

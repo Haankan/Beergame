@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bakgrunddd">
+    android:background="@drawable/bakgrunddd"
+    android:weightSum="1">
 
     <ImageView
         android:layout_width="200dp"
@@ -13,17 +14,6 @@
         app:srcCompat="@drawable/h1"
         android:id="@+id/imageView" />
 
-    <EditText
-        android:layout_width="250dp"
-        android:layout_height="130dp"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        android:inputType="textPersonName"
-        android:hint="Skriv in instruktioner för kortet"
-        android:background="@drawable/main_instrruta"
-        android:ems="10"
-        android:id="@+id/editText" />
-
     <Button
         android:text="@string/Next"
         android:layout_width="150dp"
@@ -32,4 +22,19 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/main_button"
         android:id="@+id/button7" />
+
+    <EditText
+        android:layout_width="307dp"
+        android:layout_height="wrap_content"
+        android:lines="8"
+        android:maxLines="8"
+        android:gravity="top|left"
+        android:inputType="textMultiLine"
+        android:background="#fefefe"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:layout_weight="0.36" />
+
+
 </LinearLayout>

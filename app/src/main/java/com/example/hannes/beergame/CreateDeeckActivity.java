@@ -2,6 +2,7 @@ package com.example.hannes.beergame;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.EditText;
 
 import java.util.ArrayList;
 
@@ -11,7 +12,12 @@ public class CreateDeeckActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_deeck);
+        EditText text2 = (EditText) findViewById(R.id.editText2);
+        String lektext = text2.getText().toString();
+
     }
+
+
 
     private String[] instructions;
     private ArrayList<Integer> myImageList = new ArrayList<>();

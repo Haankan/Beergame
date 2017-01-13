@@ -26,12 +26,12 @@ public class customizeActivity extends AppCompatActivity {
             String leknamn = text.getText().toString();
 
         if(TextUtils.isEmpty(leknamn)) {
-            text.setError("Your message");
+            text.setError("Skriv ett Kortleksnamn");
             return;
 
 
                 }else {
-                Intent intent = new Intent(customizeActivity.this, CreateDeckActivity.class);
+                Intent intent = new Intent(customizeActivity.this, CreateDeeckActivity.class);
                 startActivity(intent);
             }
                         }});

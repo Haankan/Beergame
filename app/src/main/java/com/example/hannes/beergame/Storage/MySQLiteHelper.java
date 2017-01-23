@@ -129,15 +129,21 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         database.execSQL("INSERT INTO " + TABLE_CARDDECKS + " VALUES (3, 'Hannes')");
 
 
-        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (1, 1, 'Drick1')");
-        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (1, 2, 'Drick2')");
-        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (1, 3, 'Drick3')");
-        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (1, 4, 'Drick4')");
-        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (1, 5, 'Drick5')");
-        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (1, 6, 'Drick6')");
-        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (1, 7, 'Drick7')");
-        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (1, 8, 'Drick8')");
-        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (1, 9, 'Drick9')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (1, 1, 'Drick två klunkar.')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (1, 2, 'Drick tre klunkar.')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (1, 3, 'Drick fyra klunkar.')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (1, 4, 'Drick fem klunkar.')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (1, 5, 'Drick sex klunkar.')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (1, 6, 'RÄKNELEK! Spelaren som drog kortet " +
+                "börjar räkna säga ett sen fortsätter spelaren till vänster med att säga två, osv.. Alla tal som antingen är delbart med siffran sju " +
+                "eller innehåller siffran sju ska ersättas med att säga ÖL!, den som först misslyckas med att göra detta får ta tre straffklunkar.')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (1, 7, 'TUMMLEK! Den som drog kortet" +
+                " får när som helst under spelets gång placera en tumme på bordet, därefter ska resterande spelare göra detsamma. " +
+                "Den som är sist med tummen på bordet får dricka tre klunkar')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (1, 8, 'TEMA! Spelaren som drog kortet väljer ett tema(t.ex Huvudstäder) Sedan " +
+                "ska alla spelare i turordning säga en huvudstad, den som till slut inte kommer på någon huvudstad eller tvekar får då dricka tre klunkar')");
+        database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (1, 9, 'REGEL! Spelaren som drog kortet får bestämma en valfri regel som alla spelare måste" +
+                " följa resten av spelets gång, om någon inte följer regeln får denne ta tre klunkar.')");
         database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (1, 10, 'Dric10k')");
         database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (1, 11, 'Drick11')");
         database.execSQL("INSERT INTO " + TABLE_GAMEINSTRUCTIONS + " VALUES (1, 12, 'Drick12')");

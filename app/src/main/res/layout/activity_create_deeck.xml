@@ -1,40 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bakgrunddd"
-    android:weightSum="1">
+    android:orientation="vertical">
 
     <ImageView
+        android:id="@+id/kortvy"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_gravity="center|top"
         android:layout_marginTop="50dp"
-        app:srcCompat="@drawable/h1"
-        android:id="@+id/imageView" />
+        app:srcCompat="@drawable/h1" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="250dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/main_instrruta"
+        android:ems="10"
+        android:hint="Skriv in instruktioner för kortet"
+        android:inputType="textPersonName" />
 
     <Button
-        android:text="@string/Next"
+        android:id="@+id/button7"
         android:layout_width="150dp"
         android:layout_height="60dp"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:background="@drawable/main_button"
-        android:id="@+id/button7" />
-
-    <EditText
-        android:layout_width="307dp"
-        android:layout_height="wrap_content"
-        android:lines="8"
-        android:maxLines="8"
-        android:gravity="top|left"
-        android:inputType="textMultiLine"
-        android:background="#fefefe"
-        android:layout_gravity="center"
-        android:ems="10"
-        android:id="@+id/editText2"
-        android:layout_weight="0.36" />
-
-
+        android:text="@string/Next" />
 </LinearLayout>

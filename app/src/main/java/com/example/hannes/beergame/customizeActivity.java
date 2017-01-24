@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class customizeActivity extends AppCompatActivity {
-
+public static String leknamn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

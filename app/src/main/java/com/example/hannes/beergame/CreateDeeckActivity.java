@@ -2,6 +2,9 @@ package com.example.hannes.beergame;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
@@ -12,14 +15,11 @@ public class CreateDeeckActivity extends AppCompatActivity {
 
 
 
-
-    .
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_deeck);
         final ImageView imgView = (ImageView) findViewById(R.id.kortvy);
-
 
         myImageList.add(R.drawable.h1);
         myImageList.add(R.drawable.h2);
@@ -73,6 +73,19 @@ public class CreateDeeckActivity extends AppCompatActivity {
         myImageList.add(R.drawable.k50);
         myImageList.add(R.drawable.k51);
         myImageList.add(R.drawable.k52);
-    }
-*/
-        }
+        Button changeview = (Button) findViewById(R.id.button7);
+
+        changeview.setOnClickListener(new View.OnClickListener() {
+                                          public void onClick(View v) {
+                                              imgView.setImageResource(myImageList.get(1));
+                                              myImageList.remove(1);
+                                              ((EditText) findViewById(R.id.editText)).setText("");
+                                          }
+
+
+                                      }
+
+        );
+
+
+    }}

@@ -11,6 +11,11 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
+/**
+ * Klassen där vi väljer kortlek
+ *
+ */
+
 
 import com.example.hannes.beergame.Storage.MySQLiteHelper;
 
@@ -43,22 +48,22 @@ public class choosedeckActivity extends AppCompatActivity implements
         });
     }
     private void loadSpinnerData() {
-        // database handler
+
         MySQLiteHelper db = new MySQLiteHelper(getApplicationContext());
 
-        // Spinner Drop down elements
+
         List<String> decks = db.getAllinstructions();
 
-        // Creating adapter for spinner
+
           ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, decks);
 
-        // Drop down layout style - list view with radio button
+
         spinner.setPrompt("Select an item");
         dataAdapter
                 .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        // attaching data adapter to spinner
+
         spinner.setAdapter(dataAdapter);
 
 
@@ -68,11 +73,11 @@ public class choosedeckActivity extends AppCompatActivity implements
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position,
                                long id) {
-        // On selecting a spinner item
+
         String label = parent.getItemAtPosition(position).toString();
         Log.d("pA", "  cardDeck:    " +   position);
 
-        spinn = position;// Showing selected spinner item
+        spinn = position;
         if(position== 0){
 
         }else {

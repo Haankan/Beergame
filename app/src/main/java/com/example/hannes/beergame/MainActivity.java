@@ -6,6 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+/**
+ * Våran startklass med buttones
+ *
+ */
+
 public class MainActivity extends AppCompatActivity {
 
     @Override

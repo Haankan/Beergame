@@ -8,6 +8,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+/**
+ * Klass
+ *
+ */
+
 public class customizeActivity extends AppCompatActivity {
 public static String leknamn;
     @Override

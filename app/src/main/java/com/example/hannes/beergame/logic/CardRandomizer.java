@@ -8,10 +8,13 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 /**
  * Created by v on 2016-12-13.
+ * Random klass för att randoma kort till spelet
+ *
+ * Använde kod vi hittade och gjorde om den
+ * Kommer nog inte använda denna klass
+ *Code for CardRandomizer class from
+ *https://github.com/DennisdeBest/AndroidAppBarbu/blob/master/app/src/main/java/com/example/dennis/cards/CardRandomizer.java
  */
-// Code for CardRandomizer class from
-// https://github.com/DennisdeBest/AndroidAppBarbu/blob/master/app/src/main/java/com/example/dennis/cards/CardRandomizer.java
-
 public class CardRandomizer {
 
     public ArrayList<Integer> getIDs(Context context){

@@ -2,6 +2,8 @@ package com.example.hannes.beergame.Storage;
 
 /**
  * Created by v on 2016-11-30.
+ * Inspirerats av Henriks databasklasser och hjälpmedel
+ *
  */
 
 import android.content.Context;
@@ -240,13 +242,13 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     public List<String> getAllinstructions(){
         List<String> decks = new ArrayList<String>();
 
-        // Select All Query
+
         String selectQuery = "SELECT  * FROM " + TABLE_CARDDECKS;
 
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
 
-        // looping through all rows and adding to list
+        // loopar igenom alla rader och lägger i lista
         decks.add("Choose deck");
         if (cursor.moveToFirst()) {
             do {
@@ -256,11 +258,11 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             } while (cursor.moveToNext());
         }
 
-        // closing connection
+
         cursor.close();
         db.close();
 
-        // returning lables
+
         return decks;
     }
 

@@ -9,6 +9,7 @@ import java.util.List;
 
 /**
  * Created by Hannes on 2016-12-14.
+ * Logiklager för kort
  */
 
 public class CardLogic {

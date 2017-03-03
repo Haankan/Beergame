@@ -2,6 +2,9 @@ package com.example.hannes.beergame.common;
 
 /**
  * Created by v on 2016-12-14.
+ * Kort class för att kunna hämta kort ID
+ * och instruktioner till specifika kort
+ *
  */
 
 public class Card {

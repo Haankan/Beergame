@@ -19,6 +19,11 @@ import java.util.Random;
 
 import static com.example.hannes.beergame.R.*;
 
+/**
+ * Här är det tänkt att man ska spela
+ * Alltså en Klass för spelande
+ */
+
 public class playActivity extends AppCompatActivity {
 
   /*  @Override
@@ -52,12 +57,12 @@ public class playActivity extends AppCompatActivity {
             TextView Counter =(TextView) findViewById(R.id.counter);
 
             @Override
-            //Action to perform on click
+
             public void onClick(View v) {
 
                 Counter.setText("New Game");
                 Random rand = new Random();
-                //if the list is empty set it to getIds
+
 
                 if(currentCards == null || currentCards.size() ==0){
                     imgView.setImageResource(getResources().getIdentifier("com.example.hannes.beergame:drawable/" + "kortrygg_tbg", null, null));

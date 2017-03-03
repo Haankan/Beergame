@@ -9,6 +9,11 @@ import android.widget.ImageView;
 
 import java.util.ArrayList;
 
+/**
+ * Klass för att skapa Deck
+ *
+ */
+
 public class CreateDeeckActivity extends AppCompatActivity {
     private ArrayList<Integer> myImageList = new ArrayList<>();
     private ArrayList<String> myInstructionList = new ArrayList<>();

@@ -2,6 +2,8 @@ package com.example.hannes.beergame.common;
 
 /**
  * Created by Hannes on 2016-12-05.
+ * CardDeck class för att hämta CardDecks
+ * Nödvändig vid val av CardDeck till spel
  */
 
 public class CardDeck {

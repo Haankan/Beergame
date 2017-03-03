@@ -9,6 +9,8 @@ import java.util.List;
 
 /**
  * Created by Hannes on 2016-12-05.
+ * Logiklager för CardDecks
+ *
  */
 
 public class CardDeckLogic {

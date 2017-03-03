@@ -6,6 +6,7 @@ import java.util.List;
 
 /**
  * Created by Hannes on 2016-12-05.
+ * Store interface för CardDeck
  */
 
 public interface CardDeckStore {

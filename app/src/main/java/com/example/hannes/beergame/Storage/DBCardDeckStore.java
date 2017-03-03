@@ -13,18 +13,19 @@ import com.example.hannes.beergame.common.CardDeck;
 import java.util.ArrayList;
 import java.util.List;
 
-
-
 /**
  * Created by Hannes on 2016-12-05.
+ * CardDeckstore lager som pratar med logiklagret
+ *
  */
+
 
 public class DBCardDeckStore implements CardDeckStore {
     private static DBCardDeckStore storage ;
 
     private static final String LOG_TAG = DBCardDeckStore.class.getName();
 
-    // Database fields
+
     private SQLiteDatabase database;
     private MySQLiteHelper dbHelper;
     private String[] allColumns = { MySQLiteHelper.DECKS_COLUMN_ID,
@@ -93,7 +94,7 @@ public class DBCardDeckStore implements CardDeckStore {
             carddecks.add(m);
             cursor.moveToNext();
         }
-        // make sure to close the cursor
+
         cursor.close();
         return carddecks;
     }

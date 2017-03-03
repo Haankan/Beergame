@@ -9,10 +9,15 @@ import android.widget.ImageView;
 
 import java.util.ArrayList;
 
+/**
+ * Klass för att skapa Deck
+ *
+ */
+
 public class CreateDeeckActivity extends AppCompatActivity {
     private ArrayList<Integer> myImageList = new ArrayList<>();
-
-
+    private ArrayList<String> myInstructionList = new ArrayList<>();
+    int i;
 
 
     @Override
@@ -73,6 +78,7 @@ public class CreateDeeckActivity extends AppCompatActivity {
         myImageList.add(R.drawable.k50);
         myImageList.add(R.drawable.k51);
         myImageList.add(R.drawable.k52);
+
         Button changeview = (Button) findViewById(R.id.button7);
 
         changeview.setOnClickListener(new View.OnClickListener() {
@@ -80,6 +86,11 @@ public class CreateDeeckActivity extends AppCompatActivity {
                                               imgView.setImageResource(myImageList.get(1));
                                               myImageList.remove(1);
                                               ((EditText) findViewById(R.id.editText)).setText("");
+                                              myInstructionList.add("balle");
+                                              if (myInstructionList.size()>2)
+                                              {
+
+                                              }
                                           }
 
 

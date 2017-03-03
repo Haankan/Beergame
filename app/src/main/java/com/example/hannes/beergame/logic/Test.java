@@ -2,6 +2,7 @@ package com.example.hannes.beergame.logic;
 
 /**
  * Created by v on 2016-12-13.
+ * Här har vi nog bara lekt
  */
 
 
